@@ -4,6 +4,10 @@ This is a simple simulation of a reaction-diffusion system which models how Rad4
 in the damage detection in the DNA repair pathway _GG-NER_ in yeast--could potentially probe 
 for lesions in the genome. In wildtype strains, Rad4 seems to be unevenly distributed in the nucleus and colocalises with heterochromatin (for human cells, see [1]). Hoogstraten et al. proposed that XPC (the human homologue of Rad4) can only associate transiently to the DNA molecule. After radiation and through the induction of DNA damage, XPC binds more stably to the damage site [1]. Therefore, Rad4 randomly probes for lesions rather than scanning for it. This is supported by this simple model of reaction-diffusion system. Rad4 randomly associates and dissociates to the DNA. After radiation, the dissociation probability is reduced, resulting in a stable DNA:protein interaction. As it can be verified by the model, this is decreasing the concentration gradient, resulting in the dissolution of the Rad4 patches. This allows the distribution of Rad4 from heterochromatin to euchromatin.
 
+## Example
+![ChromReD4 Example](ChromReD4_example.gif)
+In this simulation, I used reflecting boundaries for creating the chromatin and wrapping boundaries for the reaction-diffusion system. 
+
 ## Installation and Usage
 The model is implemented in Julia. Run from the project directory
 ```commandline
