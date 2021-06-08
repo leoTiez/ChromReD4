@@ -6,6 +6,7 @@ for lesions in the genome. In wildtype strains, Rad4 seems to be unevenly distri
 
 ## Example
 ![ChromReD4 Example](ChromReD4_example.gif)
+
 In this simulation, I used reflecting boundaries for creating the chromatin and wrapping boundaries for the reaction-diffusion system. Red represents high concentration of Rad4, blue shades represent low concentrations. The values do not represent real biological values and rather should exemplify how the system works.
 
 ## Installation and Usage
