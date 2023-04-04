@@ -10,7 +10,13 @@ for lesions in the genome. In wildtype strains, the Rad4-homologue in humans XPC
 In this simulation, I used reflecting boundaries for creating the chromatin and wrapping boundaries for the reaction-diffusion system. Red represents high concentration of Rad4, blue shades represent low concentrations. The values do not represent real biological values and rather should exemplify how the system works.
 
 ## Installation and Usage
-The model is implemented in Julia. Run from the project directory
+The model is implemented in Julia. Install dependencies via
+
+```commandline
+julia --project=. -e 'using Pkg; Pkg.instantiate()
+```
+
+Run from the project directory
 ```commandline
 julia --project=. src/main.jl 
 ```
