@@ -74,5 +74,16 @@ python3.8 ReD4.py
 ```
 
 Change the behaviour by changing the parameters in the file.
+
+## Results
+Whilst both simulate the same underlying process, they differ in their implementation. The deterministic diffusion equation
+calculates difference to a mean when everything would be perfectly mixed. Indeed, a visualisation of such an approach would
+indicate diffusion away from the DNA when binding is more stable. However, the Python implementation reveals that actually 
+accumulation becomes stronger in genetic regions, when considering also bound proteins. Consequently, the phenomenon of 
+apparently diffusing proteins occur simply the majority of proteins that can move freely are stably bound, and are therefore 
+taken out of the system. This slightly contradicts [1]. However, it should be emphasised that this implementation was only 
+used for exemplifying different protein distributions in the nucleus, and what they mean for DNA-protein interaction processes.
+**An in depth analysis is missing, and the results should be taken w/ a pinch of salt.**
+
 ## References
 [1] Hoogstraten, Deborah, et al. "Versatile DNA damage detection by the global genome nucleotide excision repair protein XPC." Journal of cell science 121.17 (2008): 2850-2859.
