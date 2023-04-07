@@ -61,5 +61,18 @@ observe a local patches behaviour shortly after the change, which becomes subseq
 
 ![reaction diffusion](figures/simulations/reaction_diffusion_koff_lowtohigh_dna.gif)
 
+Code was implemented in `Python3` and tested on `Python3.8`. To install the requirements, run
+
+```commandline
+python3.8 -m pip install -r requirements.txt
+```
+
+To run the main program, run
+
+```commandline
+python3.8 ReD4.py
+```
+
+Change the behaviour by changing the parameters in the file.
 ## References
 [1] Hoogstraten, Deborah, et al. "Versatile DNA damage detection by the global genome nucleotide excision repair protein XPC." Journal of cell science 121.17 (2008): 2850-2859.
