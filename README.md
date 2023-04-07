@@ -9,8 +9,9 @@ for lesions in the genome. In wildtype strains, the Rad4-homologue in humans XPC
 
 In this simulation, I used reflecting boundaries for creating the chromatin and wrapping boundaries for the reaction-diffusion system. Red represents high concentration of Rad4, blue shades represent low concentrations. The values do not represent real biological values and rather should exemplify how the system works.
 
-## Installation and Usage
-The model is implemented in Julia. Install dependencies via
+## Installation and Usage of Julia scripts
+The repo provides two implementations. The Julia model assumes continuous protein levels and uses the Einstein diffusion,
+which is therefore a deterministic diffusion model. Install dependencies via
 
 ```commandline
 julia --project=. -e 'using Pkg; Pkg.instantiate()
@@ -41,6 +42,24 @@ update!(nucleus, asso_prob=.1, disso_prob=.7, diffu=.245)
 # The string is appended to the title.
 plot(nucleus, "Before Radiation")
 ```
+
+## Installation and Usage of Python Script
+The Python script is exclusively based on random particle dynamics, including diffusion. It only uses a smoothed map
+of the particle distribution to determine which proteins can move most. There can be several proteins at one place,
+but a protein can only be moved to a free spot through diffusion. An example is given here:
+
+![diffusion](figures/simulations/diffusion_nucleus.gif)
+
+When the protein is now interacting with the DNA, we obtain a reaction diffusion pattern. After 150 minutes, we simulate
+that dynamics have changed (for example through UV irradiation), and proteins can bind less stably. We see the pattern 
+pattern changing from then onwards. The DNA is created through a self-avoiding random walk.
+
+![visited DNA](figures/simulations/reaction_diffusion_koff_lowtohigh_nucleus.gif)
+
+Interestingly, if the DNA is coloured w.r.t. whether it has been visited or not, we 
+observe a local patches behaviour shortly after the change, which becomes subsequently quickly random again.
+
+![reaction diffusion](figures/simulations/reaction_diffusion_koff_lowtohigh_dna.gif)
 
 ## References
 [1] Hoogstraten, Deborah, et al. "Versatile DNA damage detection by the global genome nucleotide excision repair protein XPC." Journal of cell science 121.17 (2008): 2850-2859.
